@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2011 Google Inc. All Rights Reserved. Licensed under the Apache
+ License, Version 2.0 (the "License"); you may not use this file except in
+ compliance with the License. You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software distributed
+ under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES
+ OR CONDITIONS OF ANY KIND, either express or implied. See the License for
+ the specific language governing permissions and limitations under the License. -->
+
+<!-- This view is used to display the image. I'll describe in the source
+ to VideoPlayerActivity how to expand the view. -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ android:layout_height="match_parent" android:layout_width="match_parent">
+
+ <LinearLayout android:layout_alignParentLeft="true"
+  android:id="@+id/linearLayout1" android:layout_height="match_parent"
+  android:orientation="vertical" android:layout_width="wrap_content"
+  android:layout_above="@+id/gridView1" android:layout_toLeftOf="@+id/linearLayout2"
+  android:paddingLeft="32dip" android:paddingTop="20dip">
+
+  <TextView android:text="VideoName" android:layout_width="wrap_content"
+   android:layout_height="wrap_content" android:id="@+id/videoTitle"
+   android:textColor="@color/Title" android:textStyle="bold" />
+  <TextView android:text="TextView" android:layout_width="wrap_content"
+   android:layout_height="wrap_content" android:id="@+id/videoSubTitle"
+   android:textColor="@color/subTitle" />
+  <VideoView android:id="@+id/videoView1"
+   android:layout_width="720dip" android:layout_height="405dip" />
+
+  <RatingBar android:id="@+id/ratingBar1"
+   android:layout_height="wrap_content" android:layout_width="wrap_content"
+   android:layout_gravity="center|bottom" />
+  <TextView android:text="TextView" android:layout_height="wrap_content"
+   android:layout_width="match_parent" android:id="@+id/videoDescription"
+   android:lines="10" style="@android:style/TextAppearance.Small"
+   android:gravity="left" />
+
+ </LinearLayout>
+
+</RelativeLayout>
