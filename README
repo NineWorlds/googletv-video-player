@@ -1,0 +1,7 @@
+VideoPlayer Customization
+=========================
+
+First, make sure you add the LeftNavBarLibrary.
+Project > Properties > Android (Add Library) LeftNavBarLibary
+
+Next replace the Logo in drawable et al.  (acme_logo_small)

@@ -14,8 +14,12 @@
 
 package com.example.tv.videoplayer;
 
+import com.example.google.tv.leftnavbar.LeftNavBar;
+import com.example.google.tv.leftnavbar.LeftNavBarService;
+
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
+import android.app.Activity;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
@@ -39,21 +43,31 @@ import java.util.Random;
 public class Style1Activity extends DataActivity {
     public static final String TAG = "VideoPlayer";
     public String[] mCategories = null;
-    public ActionBar mBar;
+    public LeftNavBar mBar;
     public static final int[] mIcons = {
             R.drawable.icon01,
             R.drawable.icon02, R.drawable.icon03, R.drawable.icon04, R.drawable.icon05
     };
-    public final Random mRand = new Random();
+    public final Random mRand = new Random(); // Hopefully in your app,
+                                              // you won't be using
+                                              // random icons.
 
     @Override
     public void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.style1);
-        mBar = getActionBar();
+        mBar = (LeftNavBarService.instance()).getLeftNavBar((Activity) this);
         mBar.setDisplayUseLogoEnabled(true);
-        mBar.setDisplayOptions(0, ActionBar.DISPLAY_SHOW_TITLE);
+
+        // Note - I'm showing this so that my UI is pushed down a bit and it
+        // does a partial reveal
+        // on screen. Thus giving the user an indicator that scrolling is
+        // possible.
+
+        mBar.setTitle(R.string.app_name);
+        mBar.showOptionsMenu(false);
+        // mBar.setDisplayOptions(0, ActionBar.DISPLAY_SHOW_TITLE);
+        setContentView(R.layout.style1);
     }
 
     public void onDataComplete() {
