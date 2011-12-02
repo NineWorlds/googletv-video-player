@@ -66,6 +66,7 @@ public class Style1Activity extends DataActivity {
 
         mBar.setTitle(R.string.app_name);
         mBar.showOptionsMenu(false);
+        // If you want to hide the Title, uncomment the line below.
         // mBar.setDisplayOptions(0, ActionBar.DISPLAY_SHOW_TITLE);
         setContentView(R.layout.style1);
     }
