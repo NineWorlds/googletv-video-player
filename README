@@ -2,6 +2,10 @@ VideoPlayer Customization
 =========================
 
 First, make sure you add the LeftNavBarLibrary.
-Project > Properties > Android (Add Library) LeftNavBarLibary
+http://code.google.com/p/googletv-android-samples/source/checkout   <== To get all our samples
+http://code.google.com/p/googletv-android-samples/source/browse/#git%2FLeftNavBarLibrary
+
+In Eclipse you'll want to do the following:
+    Project > Properties > Android (Add Library) LeftNavBarLibary
 
 Next replace the Logo in drawable et al.  (acme_logo_small)
